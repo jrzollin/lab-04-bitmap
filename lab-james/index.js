@@ -5,10 +5,13 @@ const colorShift = require('./lib/color-shift.js');
 const writeFile = require('./lib/writefile.js');
 
 
-const newBitMap = function(oldAddress, callback, newAddress, ...args){
+const newBitMap = function(oldAddress, transform, newAddress, ...args){
 
-  writeFile(newAddress, callback(readFile(oldAddress), ...args));
+  let read = readFile(oldAddress);
+  let transformedData = transform(read, ...args);
+
+  writeFile(newAddress, transformedData);
 
 };
 
-newBitMap('../asset/bitmap.bmp', colorShift.shift1, '../asset/bitmap3.bmp', 54, 1077, 54);
+// newBitMap('../asset/house.bmp', colorShift.shift1, '../asset/bitmap2.bmp', 54, 1077, 54);
