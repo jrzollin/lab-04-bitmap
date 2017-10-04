@@ -14,4 +14,9 @@ const newBitMap = function(oldAddress, transform, newAddress, ...args){
 
 };
 
-// newBitMap('../asset/house.bmp', colorShift.shift1, '../asset/bitmap2.bmp', 54, 1077, 54);
+// newBitMap('../asset/bitmap.bmp', colorShift.shiftArray, '../asset/bitmapTest.bmp', 54, 1077, 54);
+// newBitMap('../asset/bitmap.bmp', colorShift.halfValues, '../asset/bitmapTest.bmp', 1078, 11077);
+// newBitMap('../asset/bitmap.bmp', colorShift.colorShift, '../asset/bitmapTest1.bmp', 'blue');
+// newBitMap('../asset/bitmap.bmp', colorShift.colorShift, '../asset/bitmapTest2.bmp', 'red');
+// newBitMap('../asset/bitmap.bmp', colorShift.colorShift, '../asset/bitmapTest3.bmp', 'green');
+// newBitMap('../asset/bitmap.bmp', colorShift.invert, '../asset/bitmapTest4.bmp');
